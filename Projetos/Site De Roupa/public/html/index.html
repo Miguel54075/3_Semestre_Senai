@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREETWEAR | OFFICIAL STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #f7f7f7;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            mix-blend-mode: difference;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80') center/cover;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 3rem;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .products {
+            padding: 5rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #111;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        footer {
+            padding: 5rem 2rem;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .newsletter input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            padding: 10px 0;
+            width: 300px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">LN / CLOTHING</div>
+        <nav>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="drop.html">Drops</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>DROP 004<br>OUTSIDE</h1>
+            <a href="drop.html" class="btn">Shop Now</a>
+        </section>
+
+        <section id="shop" class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80"
+                    alt="Hoodie">
+                <div class="product-info">
+                    <h3>OVERSIZED HOODIE</h3>
+                    <p>€85.00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80"
+                    alt="Tee">
+                <div class="product-info">
+                    <h3>GRAPHIC TEE</h3>
+                    <p>€45.00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80"
+                    alt="Cargo">
+                <div class="product-info">
+                    <h3>CARGO PANTS</h3>
+                    <p>€110.00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <p>JOIN THE MAILING LIST</p>
+            <input type="email" placeholder="ENTER YOUR EMAIL">
+        </div>
+        <div class="socials">
+            <p>© 2023 STREETWEAR LAB</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

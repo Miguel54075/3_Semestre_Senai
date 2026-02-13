@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS | LN CLOTHING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #f7f7f7;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            mix-blend-mode: difference;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .page-title {
+            padding: 10rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .products {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #111;
+            cursor: pointer;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.08);
+            opacity: 0.6;
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.4s ease;
+        }
+
+        .product-card:hover .product-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-info h3 {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        footer {
+            padding: 5rem 2rem;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 5rem;
+        }
+
+        .newsletter input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            padding: 10px 0;
+            width: 300px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+
+            .newsletter input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">LN / CLOTHING</a></div>
+        <nav>
+            <ul>
+                <li><a href="drop.html">Shop</a></li>
+                <li><a href="#">Drops</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>ALL PRODUCTS</h1>
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80"
+                    alt="Hoodie">
+                <div class="product-info">
+                    <h3>OVERSIZED HOODIE / BLACK</h3>
+                    <p>R$ 349,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80"
+                    alt="Tee">
+                <div class="product-info">
+                    <h3>GRAPHIC TEE / WHITE</h3>
+                    <p>R$ 159,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80"
+                    alt="Cargo">
+                <div class="product-info">
+                    <h3>CARGO PANTS / NOIR</h3>
+                    <p>R$ 420,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&q=80"
+                    alt="Leather Jacket">
+                <div class="product-info">
+                    <h3>LEATHER BOMBER</h3>
+                    <p>R$ 890,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&q=80"
+                    alt="Tee Black">
+                <div class="product-info">
+                    <h3>ESSENTIAL TEE / BLACK</h3>
+                    <p>R$ 129,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80"
+                    alt="Jacket">
+                <div class="product-info">
+                    <h3>PUFFER JACKET</h3>
+                    <p>R$ 550,00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <p>JOIN THE MAILING LIST</p>
+            <input type="email" placeholder="ENTER YOUR EMAIL">
+        </div>
+        <div class="socials">
+            <p>© 2023 STREETWEAR LAB</p>
+        </div>
+    </footer>
+</body>
+
+</html>
