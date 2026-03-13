@@ -1,22 +1,32 @@
+
 class Tabela {
-    constructor(id, pontuacao, jogador) {
-        if(!pontuacao || !jogador){
-            throw new Error("Os campos pontuacao e jogador são obrigatórios")
-        }
+    constructor(id, pontuacao = 0, jogador) {
         this.id = id
         this.pontuacao = pontuacao
         this.jogador = jogador
-        this.pontos = 0
+        this.nivel = this.calcularNivel()
     }
-    principal(){
+
+    principal() {
         return `${this.jogador} - ${this.pontuacao}`
     }
-    ganhoPontuacao(pontos){
-        this.pontos += pontos
+
+    AdicionarPontuacao() {
+        this.pontuacao += 10
+        this.nivel = this.calcularNivel()
     }
-    ChamarPontucao(pontos){
-        this.pontuacao += pontos
+    calcularNivel() {
+        if(this.pontuacao <= 100) {
+            return 'Iniciante'
+        }else if(this.pontuacao <= 200) {
+            return'Intermediário'
+        }else if(this.pontuacao <= 300) {
+            return 'Avançado'
+        }else {
+            return 'Mestre'
+        }
     }
+    
 }
 
 export default Tabela

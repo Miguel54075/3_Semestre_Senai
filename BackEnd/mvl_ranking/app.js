@@ -10,9 +10,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
-//rotas de livros
-app.use(rotasTabela)
+app.use(rotasTabela);
 
 app.get('/', (req, res) =>{
     res.redirect('/tabela');

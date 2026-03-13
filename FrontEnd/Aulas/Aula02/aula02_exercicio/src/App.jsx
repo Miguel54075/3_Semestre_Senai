@@ -12,7 +12,15 @@ import Aula05_Exercicio from "./components/Aula05_Exercicio"
 import Aula06 from "./components/Aula06"
 import Aula04_Login from "./components/Aula04_Login"
 import Aula06_Calculadora from "./components/Aula06_Calculadora"
-
+import Aula07 from "./components/Aula07"
+import Aula07_Perfil from "./components/Aula07_Perfil"
+import Aula08 from "./components/Aula08"
+import Aula09 from "./components/Aula09"
+import Aula09_ListaNomes from "./components/Aula09_ListaNomes"
+import Aula09_Numero from "./components/Aula09_Numero"
+import Aula10 from "./components/Aula10"
+import Aula11 from "./components/Aula11"
+import Aula12 from "./components/Aula12"
 const App = () => {
   return (
     <div style={estilos.fundo}>
@@ -33,6 +41,15 @@ const App = () => {
         <Aula05_Exercicio />
         <Aula06 />
         <Aula06_Calculadora />
+        <Aula07 />
+        <Aula07_Perfil/>
+        <Aula08/>
+        <Aula09/>
+        <Aula09_ListaNomes/>
+        <Aula09_Numero/>
+        <Aula10/>
+        <Aula11/>
+        <Aula12/>
       </main>
     </div>
   )

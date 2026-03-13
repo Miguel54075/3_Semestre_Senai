@@ -1,14 +1,12 @@
-import express from 'express'
-import TabelaController from '../controllers/TabelaControllers.js'
+import express from 'express';
+import TabelaController from '../controllers/TabelaControllers.js';
+
 const router = express.Router();
 
-// rota para listar os livros
-router.get('/tabela', TabelaController.listarTabela);
+router.get('/tabela', TabelaController.listar);
 
-// rota para adicionar livros
 router.post('/tabela', TabelaController.adicionar);
 
-// rota para marcar como lido
-router.post('/tabela/:id', TabelaController.atualizarPontuacao);
+router.post('/tabela/adicionar-pontuacao', TabelaController.AdicionarPontuacao);
 
 export default router;
